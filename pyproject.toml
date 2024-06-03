@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "range-flow-forecasting"
+version = "0.1.0"
+description = "LiDAR scene forecasting via optimal transport flow matching on range images"
+authors = [{ name = "Mohamed Ashraf Salama" }]
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "torch>=2.1.0",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "nuscenes-devkit>=1.2.0",
+    "pyquaternion>=0.9.9",
+    "einops>=0.6",
+    "open3d>=0.17",
+    "matplotlib>=3.7",
+    "pillow>=9.0",
+    "tqdm>=4.64",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "black>=23.0", "ruff>=0.1"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["config*", "src*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "W"]
+ignore = ["E501"]
