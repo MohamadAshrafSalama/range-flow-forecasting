@@ -346,3 +346,4 @@ def build_projector_from_cfg(cfg) -> RangeImageProjector:
         min_depth=getattr(cfg.training, "ray_depth_min_m", 1.45),
         beam_elevations_deg=beam_profile,
     )
+
