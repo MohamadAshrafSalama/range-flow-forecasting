@@ -1301,3 +1301,4 @@ def build_world_model(cfg) -> RangeWorldModel:
     n_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print(f"[WorldModel] {n_params / 1e6:.1f}M trainable parameters")
     return model
+
