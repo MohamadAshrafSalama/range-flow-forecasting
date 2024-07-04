@@ -1302,3 +1302,4 @@ def build_world_model(cfg) -> RangeWorldModel:
     print(f"[WorldModel] {n_params / 1e6:.1f}M trainable parameters")
     return model
 
+
