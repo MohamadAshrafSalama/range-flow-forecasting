@@ -674,3 +674,4 @@ class MultiStepLoss(nn.Module):
         agg_dict["total"] = total.item()
 
         return total, agg_dict
+
