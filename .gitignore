@@ -20,8 +20,8 @@ checkpoints/
 runs/
 wandb/
 
-data/
-datasets/
+/data/
+/datasets/
 
 *.log
 results/
